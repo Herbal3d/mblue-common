@@ -9,7 +9,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using OMVSD = LibreMetaverse.StructuredData;
+using System.Text.Json.Nodes;
 
 namespace org.herbal3d.mblue.Statistics {
 
@@ -60,7 +60,7 @@ namespace org.herbal3d.mblue.Statistics {
         public abstract void Event();
         public abstract void Event(int pCount);
 
-        public abstract OMVSD.OSD GetDump();
+        public abstract JsonNode? GetDump();
 
         public Stat(string pName, string pDescription, string pUnit = "") {
             Name = pName;

@@ -11,7 +11,7 @@
 
 using Microsoft.Extensions.Logging;
 
-using OMVSD = LibreMetaverse.StructuredData;
+using System.Text.Json.Nodes;
 
 namespace org.herbal3d.mblue.Statistics {
 
@@ -30,13 +30,13 @@ namespace org.herbal3d.mblue.Statistics {
         }
 
         /// <summary>
-        /// Return an OSDArray of  the collection of statistics
+        /// Return a JsonArray of the collection of statistics
         /// </summary>
         /// <returns></returns>
-        public OMVSD.OSD GetDump() {
-            OMVSD.OSDArray map = new OMVSD.OSDArray();
+        public JsonNode GetDump() {
+            JsonArray map = new JsonArray();
             foreach (IDumpable stat in Stats) {
-                OMVSD.OSD statValues = stat.GetDump();
+                JsonNode? statValues = stat.GetDump();
                 if (statValues != null) {
                     map.Add(statValues);
                 }

@@ -9,13 +9,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using LMVSD = LibreMetaverse.StructuredData;
+using System.Text.Json.Nodes;
 
 namespace org.herbal3d.mblue {
 
-    // Simple interface saying this object can dump its state as an OSD
+    // Simple interface saying this object can dump its state as JSON
     public interface IDumpable {
 
-        public LMVSD.OSD GetDump();
+        public JsonNode? GetDump();
     }
 }

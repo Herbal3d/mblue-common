@@ -9,7 +9,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using OMVSD = LibreMetaverse.StructuredData;
+using System.Text.Json.Nodes;
 
 namespace org.herbal3d.mblue.Statistics {
 
@@ -38,14 +38,13 @@ namespace org.herbal3d.mblue.Statistics {
             InternalValue = InternalValue - pCount;
         }
 
-        public override OMVSD.OSDMap GetDump() {
-            OMVSD.OSDMap map = new OMVSD.OSDMap();
-            map["Name"] = OMVSD.OSD.FromString(Name);
-            map["Description"] = OMVSD.OSD.FromString(Description);
-            map["Unit"] = OMVSD.OSD.FromString(Unit);
-            map["Value"] = OMVSD.OSD.FromLong(InternalValue);
+        public override JsonNode GetDump() {
+            JsonObject map = new JsonObject();
+            map["Name"] = Name;
+            map["Description"] = Description;
+            map["Unit"] = Unit;
+            map["Value"] = InternalValue;
             return map;
         }
     }
 }
-

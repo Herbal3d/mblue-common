@@ -11,7 +11,7 @@
 
 using Microsoft.Extensions.Logging;
 
-using OMVSD = LibreMetaverse.StructuredData;
+using System.Text.Json.Nodes;
 
 using org.herbal3d.mblue.Logging;
 
@@ -26,13 +26,13 @@ namespace org.herbal3d.mblue.Statistics {
         private MBLogger<StatisticManager> Log = pLog;
 
         /// <summary>
-        /// A statistics collection returns an OSD structure which is a map
+        /// A statistics collection returns a JSON structure which is a map
         /// of maps. The top level map are the individual counters and
         /// their value is a map of the variables that make up the counter.
         /// </summary>
         /// <returns></returns>
-        public OMVSD.OSD GetDump() {
-            OMVSD.OSDMap values = new OMVSD.OSDMap();
+        public JsonNode GetDump() {
+            JsonObject values = new JsonObject();
             /*
             foreach (ICounter cntr in m_counters) {
                 try {

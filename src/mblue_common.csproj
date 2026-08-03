@@ -9,7 +9,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.10" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.10" />
-    <ProjectReference Include="../../libremetaverse/LibreMetaverse.StructuredData/LibreMetaverse.StructuredData.csproj" />
   </ItemGroup>
 
 </Project>
