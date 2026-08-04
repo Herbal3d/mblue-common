@@ -16,7 +16,11 @@ namespace org.herbal3d.mblue.Logging {
         // Configuration subsection name
         public const string subSectionName = "MBLogger";
 
-        public MBLogLevel LogLevelFlags { get; set; } = MBLogLevel.Information;
+        // LogLevel is either "None", "Trace", "Debug", "Information", "Warning"
+        // To enable multiple levels, use a comma separated list in the "LogSelections"
+        //   property, e.g., "Critical,Error,Warning,Information"
+        public string LogLevel { get; set; } = "Information";
+        public string LogSelections { get; set; } = "Critical,Error,Warning,Information,DBADERROR";
     }
 
 }
