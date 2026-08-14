@@ -1,4 +1,4 @@
-﻿// Copyright 2025 Robert Adams
+﻿// Copyright 2026 Robert Adams
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -11,10 +11,12 @@
 
 using System.Text.Json.Nodes;
 
-namespace org.herbal3d.mblue {
+namespace org.herbal3d.mblue
+{
 
     // Simple interface saying this object can dump its state as JSON
-    public interface IDumpable {
+    public interface IDumpable
+    {
 
         public JsonNode? GetDump();
     }
