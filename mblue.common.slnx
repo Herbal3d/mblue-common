@@ -1,5 +1,5 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src/mblue_common.csproj" />
+    <Project Path="src/mblue.common.csproj" />
   </Folder>
 </Solution>
