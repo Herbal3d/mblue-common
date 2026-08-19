@@ -11,12 +11,10 @@
 
 using System.Text.Json.Nodes;
 
-namespace org.herbal3d.mblue
-{
+namespace org.herbal3d.mblue.Common {
 
     // Simple interface saying this object can dump its state as JSON
-    public interface IDumpable
-    {
+    public interface IDumpable {
 
         public JsonNode? GetDump();
     }

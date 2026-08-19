@@ -13,9 +13,9 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json.Nodes;
 
-using MBSD = org.herbal3d.mblue.StructuredData;
+using MBSD = org.herbal3d.mblue.Common.StructuredData;
 
-namespace org.herbal3d.mblue {
+namespace org.herbal3d.mblue.Common {
 
     /// <summary>
     /// Every program has a place to put general, useful, tool routines.

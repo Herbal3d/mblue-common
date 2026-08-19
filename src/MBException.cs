@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.herbal3d.mblue {
+namespace org.herbal3d.mblue.Common {
 
     public class MBException : Exception {
         public MBException()

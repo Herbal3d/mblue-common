@@ -9,7 +9,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace org.herbal3d.mblue;
+namespace org.herbal3d.mblue.Common;
 
 /// <summary>
 /// Dictionary-like collection that stores a value once and indexes it by two unique keys.

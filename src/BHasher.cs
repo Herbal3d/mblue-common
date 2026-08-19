@@ -13,7 +13,7 @@
 using System.Text;
 using System.Security.Cryptography;
 
-namespace org.herbal3d.mblue {
+namespace org.herbal3d.mblue.Common {
 
     // There are several different hashing systems ranging from int's to SHA versions.
     // The model here is to create a hasher of the desired type, do Add's of things to

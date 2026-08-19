@@ -9,6 +9,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using org.herbal3d.mblue.Common;
+
 namespace org.herbal3d.mblue.Statistics {
 
     /// <summary>
