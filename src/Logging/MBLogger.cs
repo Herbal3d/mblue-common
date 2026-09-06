@@ -40,31 +40,31 @@ namespace org.herbal3d.mblue.Logging {
             switch (_options.Value.LogLevel.Trim().ToLowerInvariant()) {
                 case "none":
                     _logLevelFlags = MBLogLevel.None;
-                    _log.LogInformation("Log level set to 'None' from configuration.");
+                    // _log.LogInformation("Log level set to 'None' from configuration.");
                     break;
                 case "trace":
                     _logLevelFlags = allBadThings | MBLogLevel.Trace;
-                    _log.LogInformation("Log level set to 'Trace' from configuration.");
+                    // _log.LogInformation("Log level set to 'Trace' from configuration.");
                     break;
                 case "debug":
                     _logLevelFlags = allBadThings | MBLogLevel.Debug;
-                    _log.LogInformation("Log level set to 'Debug' from configuration.");
+                    // _log.LogInformation("Log level set to 'Debug' from configuration.");
                     break;
                 case "information":
                     _logLevelFlags = allBadThings | MBLogLevel.Information;
-                    _log.LogInformation("Log level set to 'Information' from configuration.");
+                    // _log.LogInformation("Log level set to 'Information' from configuration.");
                     break;
                 case "warning":
                     _logLevelFlags = allBadThings | MBLogLevel.Warning;
-                    _log.LogInformation("Log level set to 'Warning' from configuration.");
+                    // _log.LogInformation("Log level set to 'Warning' from configuration.");
                     break;
                 case "error":
                     _logLevelFlags = allBadThings | MBLogLevel.Error;
-                    _log.LogInformation("Log level set to 'Error' from configuration.");
+                    // _log.LogInformation("Log level set to 'Error' from configuration.");
                     break;
                 case "critical":
                     _logLevelFlags = allBadThings | MBLogLevel.Critical;
-                    _log.LogInformation("Log level set to 'Critical' from configuration.");
+                    // _log.LogInformation("Log level set to 'Critical' from configuration.");
                     break;
                 default:
                     // Log a warning if the user provided an invalid log level
@@ -78,7 +78,7 @@ namespace org.herbal3d.mblue.Logging {
                 MBLogLevel flags = MBLogLevel.None;
                 foreach (string selection in userSelections) {
                     if (Enum.TryParse<MBLogLevel>(selection.Trim(), true, out MBLogLevel parsedLevel)) {
-                        _log.LogInformation($"Adding log level '{selection}' from configuration.");
+                        // _log.LogInformation($"Adding log level '{selection}' from configuration.");
                         flags |= parsedLevel;
                     } else {
                         // Log a warning if the user provided an invalid log level
